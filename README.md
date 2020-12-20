@@ -1,4 +1,4 @@
-PRINCIPAIS COMANDOS DO GIT 
+PRINCIPAIS COMANDOS DO GIT
 
 1 git init - Inicia o controle de versão em uma página
 
