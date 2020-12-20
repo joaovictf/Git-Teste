@@ -11,3 +11,5 @@ PRINCIPAIS COMANDOS DO GIT
 5 git remote add origin - Informa qual repositório eu quero armazenar 
 
 6 git push -u origin master - Envia as alterações para o repositório
+
+7 git pull origin master - Importar modificações do projeto para a máquina
