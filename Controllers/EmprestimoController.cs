@@ -36,15 +36,15 @@ namespace Biblioteca.Controllers
             return RedirectToAction("Listagem");
         }
 
-        public IActionResult Listagem(string tipoFiltro, string filtro)
+        public IActionResult Listagem(string TipoFiltro, string Filtro)
         {
             Autenticacao.CheckLogin(this);
             FiltrosEmprestimos objFiltro = null;
-            if(!string.IsNullOrEmpty(filtro))
+            if(!string.IsNullOrEmpty(Filtro))
             {
                 objFiltro = new FiltrosEmprestimos();
-                objFiltro.Filtro = filtro;
-                objFiltro.TipoFiltro = tipoFiltro;
+                objFiltro.Filtro = Filtro;
+                objFiltro.TipoFiltro = TipoFiltro;
             }
             EmprestimoService emprestimoService = new EmprestimoService();
             return View(emprestimoService.ListarTodos(objFiltro));
