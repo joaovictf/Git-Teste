@@ -1,5 +1,9 @@
 using Biblioteca.Models;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using System;
+
 
 namespace Biblioteca.Controllers
 {
@@ -34,6 +38,26 @@ namespace Biblioteca.Controllers
             Usuario u = us.ObterPorId(id);
             return View(u);
         }
+
+        // // Visualização da página 
+        // public IActionResult Excluir(int id)
+        // {
+        //     UsuarioService userServ = new UsuarioService();
+        //     Usuario usuario = userServ.GetPostDetail(id);
+        //     return View(usuario);
+        // }
+
+        // // Exclusão
+        // [HttpPost]
+        // public IActionResult Excluir(int id, string decisao)
+        // {
+        //     if(decisao == "s")
+        //     {
+        //         UsuarioService userServ = new UsuarioService();
+        //         userServ.DeletePost(id);
+        //     }
+        //     return RedirectToAction("Listagem");
+        // }
 
         public IActionResult Listagem() 
         {

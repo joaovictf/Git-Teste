@@ -1,6 +1,6 @@
-using System.Linq;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 namespace Biblioteca.Models
 
 {
@@ -24,6 +24,16 @@ namespace Biblioteca.Models
                 usuario.Nome = u.Nome;
                 usuario.Email = u.Email;
                 usuario.Senha = u.Senha;
+                bc.SaveChanges();
+            }
+        }
+
+        public void DeletePost(int id)
+        {
+            using(BibliotecaContext bc = new BibliotecaContext())
+            {
+                Usuario usuario = bc.Usuario.Find(id);
+                bc.Usuario.Remove(usuario);
                 bc.SaveChanges();
             }
         }
